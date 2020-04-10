@@ -319,18 +319,6 @@ export default class CalendarPicker extends Component {
         config={{ ..._swipeConfig, ...swipeConfig }}
       >
         <View style={styles.calendar}>
-          <HeaderControls
-            styles={styles}
-            currentMonth={currentMonth}
-            currentYear={currentYear}
-            initialDate={moment(initialDate)}
-            onPressPrevious={this.handleOnPressPrevious}
-            onPressNext={this.handleOnPressNext}
-            months={months}
-            previousTitle={previousTitle}
-            nextTitle={nextTitle}
-            textStyle={textStyle}
-          />
           <Weekdays
             styles={styles}
             startFromMonday={startFromMonday}
@@ -359,6 +347,18 @@ export default class CalendarPicker extends Component {
             selectedRangeStyle={selectedRangeStyle}
             selectedRangeEndStyle={selectedRangeEndStyle}
             customDatesStyles={customDatesStyles}
+          />
+          <HeaderControls
+              styles={styles}
+              currentMonth={currentMonth}
+              currentYear={currentYear}
+              initialDate={moment(initialDate)}
+              onPressPrevious={this.handleOnPressPrevious}
+              onPressNext={this.handleOnPressNext}
+              months={months}
+              previousTitle={previousTitle}
+              nextTitle={nextTitle}
+              textStyle={textStyle}
           />
         </View>
       </Swiper>
